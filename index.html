@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Kasia 💖</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(to bottom right, #ffdce1, #e0f7fa);
+      font-family: 'Open Sans', sans-serif;
+      color: #6a1b9a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5em;
+      margin: 20px 0 10px;
+      color: #c2185b;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.1em;
+      max-width: 90%;
+      margin: 20px 0;
+      padding: 15px;
+      background-color: rgba(255, 255, 255, 0.65);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    a {
+      margin-top: 20px;
+      font-size: 1.2em;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(to right, #ff80ab, #f50057);
+      padding: 12px 24px;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(245, 0, 87, 0.4);
+      transition: background 0.3s, transform 0.2s;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    a:hover {
+      background: linear-gradient(to right, #f50057, #ff80ab);
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+      margin-top: 30px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: pink;
+      transform: rotate(45deg);
+      animation: float 6s infinite;
+      opacity: 0.6;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {transform: translateY(0) rotate(45deg); opacity: 0.6;}
+      100% {transform: translateY(-100vh) rotate(45deg); opacity: 0;}
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+      }
+      a {
+        font-size: 1em;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2024/04/23/audio_e04e5ad542.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio HTML5.
+  </audio>
+
+  <img src="https://imgur.com/a/igMAPct.jpg" alt="Foto com Kasia" /> <!-- Substitua por uma URL válida -->
+
+  <h1>Eu amo você, Kasia 💗</h1>
+
+  <p>
+    Eu te peço perdão, de todo o meu coração.<br><br>
+    Quero que dessa vez a gente se entenda, que você fale mais comigo,<br>
+    que haja mais amor, mais cuidado, mais entrega.<br><br>
+    Sei que você ficou em choque, e eu também. Mas com oração, reflexão e muito amor,<br>
+    eu entendi que as pessoas merecem uma segunda chance.<br><br>
+    Eu te amo profundamente, Kasia. Vamos fazer diferente. Vamos fazer dar certo. ❤️
+  </p>
+
+  <a href="https://www.youtube.com/watch?v=u6t_dMBezSU" target="_blank">Clique se você também me ama 💕</a>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (3 + Math.random() * 3) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 400);
+  </script>
+</body>
+</html>
